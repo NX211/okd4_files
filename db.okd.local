@@ -1,5 +1,5 @@
 $TTL    604800
-@       IN      SOA     okd-services.okd.local. admin.okd.local. (
+@       IN      SOA     okd-services.attlocal.net. admin.attlocal.net. (
                   1     ; Serial
              604800     ; Refresh
               86400     ; Retry
@@ -11,28 +11,28 @@ $TTL    604800
     IN      NS      okd-services
 
 ; name servers - A records
-okd-services.okd.local.          IN      A       192.168.1.210
+okd-services.attlocal.net.          IN      A       192.168.1.210
 
 ; OpenShift Container Platform Cluster - A records
-okd-bootstrap.lab.okd.local.        IN      A      192.168.1.200
-okd-control-one.lab.okd.local.        IN      A      192.168.1.201
-okd-control-two.lab.okd.local.         IN      A      192.168.1.202
-okd-control-three.lab.okd.local.         IN      A      192.168.1.203
-okd-compute-one.lab.okd.local.        IN      A      192.168.1.204
-okd-compute-two.lab.okd.local.        IN      A      192.168.1.205
+okd-bootstrap.lab.attlocal.net.        IN      A      192.168.1.200
+okd-control-one.lab.attlocal.net.        IN      A      192.168.1.201
+okd-control-two.lab.attlocal.net.         IN      A      192.168.1.202
+okd-control-three.lab.attlocal.net.         IN      A      192.168.1.203
+okd-compute-one.lab.attlocal.net.        IN      A      192.168.1.204
+okd-compute-two.lab.attlocal.net.        IN      A      192.168.1.205
 
 ; OpenShift internal cluster IPs - A records
-api.lab.okd.local.    IN    A    192.168.1.210
-api-int.lab.okd.local.    IN    A    192.168.1.210
-*.apps.lab.okd.local.    IN    A    192.168.1.210
-etcd-0.lab.okd.local.    IN    A     192.168.1.201
-etcd-1.lab.okd.local.    IN    A     192.168.1.202
-etcd-2.lab.okd.local.    IN    A    192.168.1.203
-console-openshift-console.apps.lab.okd.local.     IN     A     192.168.1.210
-oauth-openshift.apps.lab.okd.local.     IN     A     192.168.1.210
+api.lab.attlocal.net.    IN    A    192.168.1.210
+api-int.lab.attlocal.net.    IN    A    192.168.1.210
+*.apps.lab.attlocal.net.    IN    A    192.168.1.210
+etcd-0.lab.attlocal.net.    IN    A     192.168.1.201
+etcd-1.lab.attlocal.net.    IN    A     192.168.1.202
+etcd-2.lab.attlocal.net.    IN    A    192.168.1.203
+console-openshift-console.apps.lab.attlocal.net.     IN     A     192.168.1.210
+oauth-openshift.apps.lab.attlocal.net.     IN     A     192.168.1.210
 
 ; OpenShift internal cluster IPs - SRV records
-_etcd-server-ssl._tcp.lab.okd.local.    86400     IN    SRV     0    10    2380    etcd-0.lab
-_etcd-server-ssl._tcp.lab.okd.local.    86400     IN    SRV     0    10    2380    etcd-1.lab
-_etcd-server-ssl._tcp.lab.okd.local.    86400     IN    SRV     0    10    2380    etcd-2.lab
+_etcd-server-ssl._tcp.lab.attlocal.net.    86400     IN    SRV     0    10    2380    etcd-0.lab
+_etcd-server-ssl._tcp.lab.attlocal.net.    86400     IN    SRV     0    10    2380    etcd-1.lab
+_etcd-server-ssl._tcp.lab.attlocal.net.    86400     IN    SRV     0    10    2380    etcd-2.lab
 
